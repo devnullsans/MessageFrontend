@@ -11,8 +11,8 @@ import StructuredLayout from "./StructuredLayout";
 
 import Dashboard from "./Dashboard";
 
-import { Helmet } from "react-helmet";
 import { useContext, useEffect } from "react";
+import Boards from "./Boards";
 
 const Layout = () => {
   const { fetchGlobalData, global } = useContext(GlobalContext);
@@ -22,13 +22,12 @@ const Layout = () => {
 
   return (
     <>
-      <Helmet>
-        <link rel="icon" id="favicon" href={global[0]?.favicon?.url || `${import.meta.env.VITE_LOGO_URL}`} />
-      </Helmet>
+     
       <Routes>
         {/* <Route element={<Auth />}> */}
           <Route element={<StructuredLayout />}>
              <Route path="/dashboard" element={<Dashboard />} />
+             <Route path="/boards" element={<Boards />} />
             
           </Route>
           <Route path="*" element={<p>Not Found</p>} />

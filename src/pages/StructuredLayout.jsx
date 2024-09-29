@@ -15,14 +15,7 @@ export default function StructuredLayout() {
       }`}
     >
       {/* Navbar */}
-      <Navbar
-        toggle={toggleSidebar}
-        settoggle={setToggleSidebar}
-        pageBlur={pageBlur}
-        setPageBlur={setPageBlur}
-        isDarkTheme={isDarkTheme}
-        setIsDarkTheme={setIsDarkTheme}
-      />
+      
 
       {/* Sidebar and Content Wrapper */}
       <div className="flex w-full h-full overflow-hidden">
@@ -37,7 +30,10 @@ export default function StructuredLayout() {
   />
 
   {/* Main Content Area */}
-  <div className="flex-grow p-4 overflow-y-auto overflow-x-hidden">
+  <div className="flex-grow  overflow-y-auto overflow-x-hidden">
+  <Navbar
+      
+      />
 <Outlet/>
   </div>
 </div>
